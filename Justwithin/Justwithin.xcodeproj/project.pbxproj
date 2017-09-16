@@ -12,6 +12,8 @@
 		010C2D501F6CD65E00454D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010C2D4E1F6CD65E00454D8F /* Main.storyboard */; };
 		010C2D521F6CD65E00454D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010C2D511F6CD65E00454D8F /* Assets.xcassets */; };
 		010C2D551F6CD65E00454D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010C2D531F6CD65E00454D8F /* LaunchScreen.storyboard */; };
+		010C2D5F1F6CDC7A00454D8F /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C2D5E1F6CDC7A00454D8F /* NotificationExtension.swift */; };
+		010C2D611F6CE06900454D8F /* PrintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C2D601F6CE06900454D8F /* PrintExtension.swift */; };
 		1264BAF85DA89E9A63BDBCB4 /* Pods_Justwithin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EEF743E765D4DF98999128 /* Pods_Justwithin.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		010C2D511F6CD65E00454D8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		010C2D541F6CD65E00454D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		010C2D561F6CD65E00454D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		010C2D5E1F6CDC7A00454D8F /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
+		010C2D601F6CE06900454D8F /* PrintExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintExtension.swift; sourceTree = "<group>"; };
 		83EEF743E765D4DF98999128 /* Pods_Justwithin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Justwithin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2B5505F7BD495521E9011F /* Pods-Justwithin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justwithin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Justwithin/Pods-Justwithin.release.xcconfig"; sourceTree = "<group>"; };
 		DA24B15D652007E86DCA696D /* Pods-Justwithin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justwithin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Justwithin/Pods-Justwithin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 		010C2D491F6CD65E00454D8F /* Justwithin */ = {
 			isa = PBXGroup;
 			children = (
+				010C2D5D1F6CDC6100454D8F /* Extension */,
 				010C2D4A1F6CD65E00454D8F /* AppDelegate.swift */,
 				010C2D4C1F6CD65E00454D8F /* ViewController.swift */,
 				010C2D4E1F6CD65E00454D8F /* Main.storyboard */,
@@ -69,6 +74,15 @@
 				010C2D561F6CD65E00454D8F /* Info.plist */,
 			);
 			path = Justwithin;
+			sourceTree = "<group>";
+		};
+		010C2D5D1F6CDC6100454D8F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				010C2D5E1F6CDC7A00454D8F /* NotificationExtension.swift */,
+				010C2D601F6CE06900454D8F /* PrintExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		1E9DAB09C5B04D82149062FF /* Pods */ = {
@@ -165,9 +179,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Justwithin/Pods-Justwithin-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -229,6 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010C2D5F1F6CDC7A00454D8F /* NotificationExtension.swift in Sources */,
+				010C2D611F6CE06900454D8F /* PrintExtension.swift in Sources */,
 				010C2D4D1F6CD65E00454D8F /* ViewController.swift in Sources */,
 				010C2D4B1F6CD65E00454D8F /* AppDelegate.swift in Sources */,
 			);
@@ -371,7 +390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZBBP5D6DJ;
 				INFOPLIST_FILE = Justwithin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.Justwithin.Justwithin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,7 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZBBP5D6DJ;
 				INFOPLIST_FILE = Justwithin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.Justwithin.Justwithin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
